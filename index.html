@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Predictor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f2f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 16px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h2>Enter Student Details</h2>
+        Hours Studied: <input type="number" name="Hours_Studied" required>
+        Attendance (%): <input type="number" name="Attendance" required>
+        Parental Involvement: <input type="text" name="Parental_Involvement" required>
+        Access to Resources: <input type="text" name="Access_to_Resources" required>
+        Extracurricular Activities: <input type="text" name="Extracurricular_Activities" required>
+        Sleep Hours: <input type="number" name="Sleep_Hours" required>
+        Previous Scores: <input type="number" name="Previous_Scores" required>
+        Motivation Level: <input type="text" name="Motivation_Level" required>
+        Internet Access (Yes/No): <input type="text" name="Internet_Access" required>
+        Tutoring Sessions: <input type="number" name="Tutoring_Sessions" required>
+        Family Income: <input type="text" name="Family_Income" required>
+        Teacher Quality: <input type="text" name="Teacher_Quality" required>
+        School Type: <input type="text" name="School_Type" required>
+        Peer Influence: <input type="text" name="Peer_Influence" required>
+        Physical Activity (hrs/wk): <input type="number" name="Physical_Activity" required>
+        Learning Disabilities: <input type="text" name="Learning_Disabilities" required>
+        Parental Education Level: <input type="text" name="Parental_Education_Level" required>
+        Distance from Home: <input type="text" name="Distance_from_Home" required>
+        Gender: <input type="text" name="Gender" required>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
